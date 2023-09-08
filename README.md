@@ -1,18 +1,28 @@
 # Stroke-based Neural Painting and Stylization with Dynamically Predicted Painting Region (ACM MM 2023)
 
+###  [Paper](https://arxiv.org/abs/2309.03504)
+<!-- <br> -->
+[Teng Hu](https://github.com/sjtuplayer), 
+[Ran Yi](https://yiranran.github.io/), 
+[Haokun Zhu](https://github.com/zwandering), 
+[Liang Liu](https://scholar.google.com/citations?hl=zh-CN&user=Kkg3IPMAAAAJ), 
+[Jinlong Peng](https://pjl1995.github.io/)
+[Yabiao Wang](https://scholar.google.com/citations?hl=zh-CN&user=xiK4nFUAAAAJ), 
+[Chengjie Wang](https://scholar.google.com/citations?hl=zh-CN&user=fqte5H4AAAAJ), 
+[Lizhuang Ma](https://dmcv.sjtu.edu.cn/) 
+<!-- <br> -->
+
+![image](imgs/framework.jpg)
 
 ## Introduction
 
 ### Abstract
 >Stroke-based rendering aims to recreate an image with a set of strokes. Most existing methods render complex images using an uniform-block-dividing strategy, which leads to boundary inconsistency artifacts. To solve the problem, we propose Compositional Neural Painter, a novel stroke-based rendering framework which dynamically predicts the next painting region based on the current canvas, instead of dividing the image plane uniformly into painting regions. We start from an empty canvas and divide the painting process into several steps. At each step, a compositor network trained with a phasic RL strategy first predicts the next painting region, then a painter network trained with a WGAN discriminator predicts stroke parameters, and a stroke renderer paints the strokes onto the painting region of the current canvas. Moreover, we extend our method to stroke-based style transfer with a novel differentiable distance transform loss, which helps preserve the structure of the input image during stroke-based stylization. Extensive experiments show our model outperforms the existing models in both stroke-based neural painting and stroke-based stylization.
 
-This work has been accepted by ACM MM 2023. [Paper Link](https://arxiv.org/abs/2309.03504).
+This work has been accepted by ACM MM 2023. 
 
 ### The Boundary Inconsistency Problem in Existing Works
 ![image](imgs/boundary%20inconsistency.jpg)
-
-### Our Framework
-![image](imgs/framework.jpg)
 
 ### Demos
 <div class="half">
