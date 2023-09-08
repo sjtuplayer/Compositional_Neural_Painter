@@ -19,16 +19,22 @@ This work has been accepted by ACM MM 2023.
 ![image](imgs/comparison%20results.jpg)
 
 ### Demos
-
-![Demo](imgs/1.gif)![Demo](imgs/2.gif)![Demo](imgs/3.gif)![Demo](imgs/4.gif)
-![Demo](imgs/5.gif)![Demo](imgs/6.gif)![Demo](imgs/7.gif)![Demo](imgs/8.gif)
-
+<div class="half">
+    <img src="imgs/1.gif" width="180"><img src="imgs/2.gif" width="180"><img src="imgs/3.gif" width="180"><img src="imgs/4.gif" width="180">
+</div>
+<div class="half">
+    <img src="imgs/5.gif" width="180"><img src="imgs/6.gif" width="180"><img src="imgs/7.gif" width="180"><img src="imgs/8.gif" width="180">
+</div>
 
 ## Training Step
 
-### (0) Data Prepare
+### (0) Prepare
 Data prepare: download the [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset or [ImageNet](https://image-net.org) dataset
 
+Dependencies:
+```
+pip install torch==1.6.0
+```
 
 ### (1) Train the stroke renderer
 
@@ -54,7 +60,7 @@ $ cd compositor
 $ python3 train.py --dataset=path_to_your_dataset
 ```
 
-## Test Step
+## Testing Step
 
 ### Image to painting
 After all the training steps are finished, you can paint an image by:
