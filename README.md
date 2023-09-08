@@ -1,22 +1,18 @@
 # Stroke-based Neural Painting and Stylization with Dynamically Predicted Painting Region (ACM MM 2023)
 
 
-
 ## Introduction
 
 ### Abstract
 >Stroke-based rendering aims to recreate an image with a set of strokes. Most existing methods render complex images using an uniform-block-dividing strategy, which leads to boundary inconsistency artifacts. To solve the problem, we propose Compositional Neural Painter, a novel stroke-based rendering framework which dynamically predicts the next painting region based on the current canvas, instead of dividing the image plane uniformly into painting regions. We start from an empty canvas and divide the painting process into several steps. At each step, a compositor network trained with a phasic RL strategy first predicts the next painting region, then a painter network trained with a WGAN discriminator predicts stroke parameters, and a stroke renderer paints the strokes onto the painting region of the current canvas. Moreover, we extend our method to stroke-based style transfer with a novel differentiable distance transform loss, which helps preserve the structure of the input image during stroke-based stylization. Extensive experiments show our model outperforms the existing models in both stroke-based neural painting and stroke-based stylization.
 
-This work has been accepted by ACM MM 2023.
+This work has been accepted by ACM MM 2023. [Paper Link](https://arxiv.org/abs/2309.03504).
 
 ### The Boundary Inconsistency Problem in Existing Works
 ![image](imgs/boundary%20inconsistency.jpg)
 
 ### Our Framework
 ![image](imgs/framework.jpg)
-
-### Image-to-Painting Results
-![image](imgs/comparison%20results.jpg)
 
 ### Demos
 <div class="half">
@@ -25,6 +21,10 @@ This work has been accepted by ACM MM 2023.
 <div class="half">
     <img src="imgs/5.gif" width="180"><img src="imgs/6.gif" width="180"><img src="imgs/7.gif" width="180"><img src="imgs/8.gif" width="180">
 </div>
+
+## Todo (Latest update: 2023/09/08)
+- [x] **Release the training code
+- [ ] **Release the pretrained model
 
 ## Training Step
 
