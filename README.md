@@ -1,21 +1,36 @@
-# Stroke-based Neural Painting and Stylization with Dynamically Predicted Painting Region
+# Stroke-based Neural Painting and Stylization with Dynamically Predicted Painting Region (ACM MM 2023)
 
 
-## Abstract
 
-We show the training and testing method of our model here.
-The training process can be divided into three steps:
+## Introduction
 
-(0) Data prepare: download the [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset or [ImageNet](https://image-net.org) dataset
+### Abstract
+>Stroke-based rendering aims to recreate an image with a set of strokes. Most existing methods render complex images using an uniform-block-dividing strategy, which leads to boundary inconsistency artifacts. To solve the problem, we propose Compositional Neural Painter, a novel stroke-based rendering framework which dynamically predicts the next painting region based on the current canvas, instead of dividing the image plane uniformly into painting regions. We start from an empty canvas and divide the painting process into several steps. At each step, a compositor network trained with a phasic RL strategy first predicts the next painting region, then a painter network trained with a WGAN discriminator predicts stroke parameters, and a stroke renderer paints the strokes onto the painting region of the current canvas. Moreover, we extend our method to stroke-based style transfer with a novel differentiable distance transform loss, which helps preserve the structure of the input image during stroke-based stylization. Extensive experiments show our model outperforms the existing models in both stroke-based neural painting and stroke-based stylization.
+
+This work has been accepted by ACM MM 2023.
+
+### The Boundary Inconsistency Problem in Existing Works
+![image](imgs/boundary%20inconsistency.jpg)
+
+### Our Framework
+![image](imgs/framework.jpg)
+
+### Image-to-Painting Results
+![image](imgs/comparison%20results.jpg)
+
+### Demos
+
+![Demo](imgs/1.gif)![Demo](imgs/2.gif)![Demo](imgs/3.gif)![Demo](imgs/4.gif)
+![Demo](imgs/5.gif)![Demo](imgs/6.gif)![Demo](imgs/7.gif)![Demo](imgs/8.gif)
 
 
-(1) Train the stroke renderer;
+## Training Step
 
-(2) Train the painter network;
+### (0) Data Prepare
+Data prepare: download the [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset or [ImageNet](https://image-net.org) dataset
 
-(3) Train the compositor network.
 
-## Train the stroke renderer
+### (1) Train the stroke renderer
 
 
 To train the neural stroke renderer, you can run the following code
@@ -23,7 +38,7 @@ To train the neural stroke renderer, you can run the following code
 python3 compositor/train_renderer_FCN.py
 ```
 
-## Train the painter network
+### (2) Train the painter network
 
 After the neural renderer is trained, you can train the painter network by:
 ```
@@ -31,7 +46,7 @@ $ cd painter
 $ python3 train.py
 ```
 
-## Train the compositor network
+### (3) Train the compositor network
 
 With the trained stroke renderer and painter network, you can train the compositor network by:
 ```
@@ -39,9 +54,9 @@ $ cd compositor
 $ python3 train.py --dataset=path_to_your_dataset
 ```
 
-##Test
+## Test Step
 
-### Image to paint
+### Image to painting
 After all the training steps are finished, you can paint an image by:
 ```
 $ cd compositor
