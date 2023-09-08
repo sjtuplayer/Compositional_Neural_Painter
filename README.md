@@ -98,4 +98,5 @@ If you find this code helpful for your research, please cite:
       author={Teng Hu and Ran Yi and Haokun Zhu and Liang Liu and Jinlong Peng and Yabiao Wang and Chengjie Wang and Lizhuang Ma},
       booktitle={Proceedings of the 30th ACM International Conference on Multimedia},
       year={2023}
+      }
 ```
