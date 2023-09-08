@@ -9,7 +9,7 @@
 [Jinlong Peng](https://pjl1995.github.io/)
 [Yabiao Wang](https://scholar.google.com/citations?hl=zh-CN&user=xiK4nFUAAAAJ), 
 [Chengjie Wang](https://scholar.google.com/citations?hl=zh-CN&user=fqte5H4AAAAJ), 
-[Lizhuang Ma](https://dmcv.sjtu.edu.cn/) 
+ and [Lizhuang Ma](https://dmcv.sjtu.edu.cn/) 
 <!-- <br> -->
 
 ![image](imgs/framework.jpg)
