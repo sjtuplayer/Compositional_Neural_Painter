@@ -32,9 +32,15 @@ This work has been accepted by ACM MM 2023.
     <img src="imgs/5.gif" width="180"><img src="imgs/6.gif" width="180"><img src="imgs/7.gif" width="180"><img src="imgs/8.gif" width="180">
 </div>
 
-## Todo (Latest update: 2023/09/08)
+## Todo (Latest update: 2023/10/16)
 - [x] **Release the training code
-- [ ] **Release the pretrained model
+- [x] **Release the pretrained model
+
+## Pretrained Models
+The pretrained models can be downloaded from [Google Cloud](https://drive.google.com/drive/folders/1MFa7RNEREvn8nsLWmwmYpy_EUGpGbztt?usp=sharing) and [百度网盘](https://pan.baidu.com/s/11to0MHjXqzxJU89rqFAHiA) (提取码：0306)
+
+You can put painter.pkl under painter/checkpoints, compositor.pkl under compositor/checkpoints and renderer-oil.pkl under the main folder.
+
 
 ## Training Step
 
@@ -76,8 +82,12 @@ $ python3 train.py --dataset=path_to_your_dataset
 After all the training steps are finished, you can paint an image by:
 ```
 $ cd compositor
-$ python3 test.py --img_path=path_to_your_test_img
+$ python3 test.py --img_path=path_to_your_test_img --stroke_num=number_of_strokes
 ```
+
+If you want to save the painting process as a video, you can use ```--video```.
+
+If the painted results are not so good, you can try different painting mode by ```--mode=2``` or ```--mode=3```.
 
 ### Test the DT loss
 
